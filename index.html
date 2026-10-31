@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>instalab.365 · 인스타그램 성장 강사</title>
+<meta name="description" content="인스타그램 자동화로 성장과 수익화를 돕는 강의. instalab.365" />
+
+<!-- 폰트 (구글 폰트) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<!--
+================================================================
+  ✏️  여기만 고치시면 됩니다 (수업 내용 · 가격 · 링크)
+================================================================
+  아래 CONFIG 안의 값만 바꾸면 페이지가 자동으로 바뀝니다.
+  - 따옴표(" ") 안의 글자만 바꾸세요.
+  - 쉼표(,)와 중괄호({ })는 지우지 마세요.
+  - 바꾼 뒤 저장하고 브라우저에서 새로고침(F5)하면 반영됩니다.
+================================================================
+-->
+<script>
+const CONFIG = {
+
+  /* ── 기본 정보 ───────────────────────────────── */
+  brand: "instalab.365",                       // 화면에 보일 이름/브랜드
+  tagline: "인스타그램, 자동화로 키웁니다.",      // 첫 화면 큰 문구 (3초 안에 읽히는 한 줄)
+  subline: "복잡한 운영은 자동화에 맡기고, 성장과 수익화에만 집중하세요.", // 큰 문구 아래 설명 한 줄
+
+  // 신뢰를 주는 짧은 소개 (내가 누구인지)
+  intro: "인스타그램 성장과 자동화를 가르치는 강사입니다. 원리부터 자동화 세팅, 수익화까지 — 혼자서도 꾸준히 굴러가는 계정을 만들도록 돕습니다.",
+
+  /* ── 수업(상품) ──────────────────────────────── */
+  // 수업을 추가/삭제하려면 { } 블록 하나를 통째로 복사하거나 지우세요.
+  classes: [
+    {
+      tag: "STEP 1",
+      title: "인스타그램의 원리",
+      desc: "알고리즘과 도달 원리를 이해하고, 왜 내 게시물이 퍼지는지(또는 안 퍼지는지)를 파악합니다.",
+      bullets: ["알고리즘·노출 구조 이해", "콘텐츠가 터지는 기준", "내 계정 진단"],
+      price: "99,000원",
+      note: ""                    // 작은 안내문구 (예: "1:1 포함", 없으면 "")
+    },
+    {
+      tag: "STEP 2",
+      title: "인스타그램 자동화 세팅",
+      desc: "반복되는 운영 업무를 자동화로 세팅해, 적은 시간으로 계정을 꾸준히 굴립니다.",
+      bullets: ["DM·댓글 자동 응답 세팅", "콘텐츠 예약·발행 자동화", "실전 세팅 따라하기"],
+      price: "149,000원",
+      note: "실습 포함"
+    },
+    {
+      tag: "STEP 3",
+      title: "인스타그램 자동화 수익화",
+      desc: "자동화로 만든 안정적인 운영 위에서 실제 매출이 나오는 수익 구조를 설계합니다.",
+      bullets: ["수익 모델 설계", "자동화 기반 판매 흐름", "꾸준한 매출 만들기"],
+      price: "249,000원",
+      note: "가장 인기"
+    }
+  ],
+
+  /* ── 문의 버튼 링크 ──────────────────────────── */
+  instagramUrl: "https://instagram.com/instalab.365",   // 인스타 프로필 주소
+  instagramDmUrl: "https://ig.me/m/instalab.365",        // 인스타 DM 바로가기
+  kakaoUrl: "https://open.kakao.com/",                   // 카카오톡 오픈채팅/문의 주소 (여기에 본인 링크로 교체)
+
+  /* ── 맺음말 ─────────────────────────────────── */
+  closing: "지금 계정이 막막하다면, 편하게 먼저 물어보세요."
+};
+</script>
+
+<style>
+  :root{
+    --blue:#2563eb;          /* 메인 파랑 */
+    --blue-deep:#1e40af;     /* 진한 파랑 */
+    --blue-soft:#eff4ff;     /* 아주 연한 파랑 (배경) */
+    --blue-line:#dbe6ff;     /* 연한 파랑 테두리 */
+    --ink:#0b0b0f;           /* 포인트 검정 */
+    --text:#2b2f38;          /* 본문 글자 */
+    --muted:#6b7280;         /* 흐린 글자 */
+    --white:#ffffff;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(37,99,235,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:"Noto Sans KR",system-ui,-apple-system,sans-serif;
+    color:var(--text);
+    background:var(--white);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
+  a{color:inherit;text-decoration:none}
+
+  /* ── 상단바 ── */
+  .topbar{
+    position:sticky;top:0;z-index:20;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--blue-line);
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:900;font-size:19px;color:var(--ink);letter-spacing:-.3px}
+  .logo span{color:var(--blue)}
+  .top-cta{
+    font-weight:700;font-size:14px;color:var(--white);
+    background:var(--ink);padding:9px 16px;border-radius:999px;
+    transition:transform .15s ease;
+  }
+  .top-cta:hover{transform:translateY(-1px)}
+
+  /* ── 히어로 (첫 화면) ── */
+  .hero{
+    background:
+      radial-gradient(1200px 400px at 50% -120px, var(--blue-soft), transparent),
+      var(--white);
+    padding:84px 0 64px;
+    text-align:center;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:13px;font-weight:700;color:var(--blue-deep);
+    background:var(--blue-soft);border:1px solid var(--blue-line);
+    padding:7px 15px;border-radius:999px;margin-bottom:22px;
+  }
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--blue);display:inline-block}
+  .hero h1{
+    font-size:clamp(30px,6.4vw,50px);
+    line-height:1.25;font-weight:900;color:var(--ink);
+    margin:0 0 18px;letter-spacing:-1px;
+  }
+  .hero h1 b{color:var(--blue)}
+  .hero .sub{font-size:clamp(16px,2.6vw,19px);color:var(--muted);margin:0 auto 32px;max-width:540px}
+  .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-weight:700;font-size:15px;padding:14px 26px;border-radius:999px;
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .btn-primary{background:var(--blue);color:var(--white);box-shadow:var(--shadow)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(37,99,235,.28)}
+  .btn-ghost{background:var(--white);color:var(--ink);border:1.5px solid var(--blue-line)}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+  .btn-dark{background:var(--ink);color:var(--white)}
+  .btn-dark:hover{transform:translateY(-2px)}
+
+  /* ── 소개 한 줄 ── */
+  .intro{padding:10px 0 4px}
+  .intro .card{
+    background:var(--white);border:1px solid var(--blue-line);border-radius:var(--radius);
+    padding:28px 30px;box-shadow:var(--shadow);text-align:center;
+    font-size:clamp(15px,2.4vw,17px);color:var(--text);
+  }
+  .intro .who{display:block;font-weight:700;color:var(--blue-deep);margin-bottom:6px;font-size:14px;letter-spacing:.5px}
+
+  /* ── 섹션 공통 ── */
+  section{padding:56px 0}
+  .sec-head{text-align:center;margin-bottom:38px}
+  .sec-head .kicker{font-size:13px;font-weight:800;color:var(--blue);letter-spacing:1px;text-transform:uppercase}
+  .sec-head h2{font-size:clamp(24px,4vw,32px);font-weight:900;color:var(--ink);margin:10px 0 0;letter-spacing:-.6px}
+
+  /* ── 수업 카드 ── */
+  .classes{display:grid;gap:18px}
+  .cls{
+    position:relative;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;
+    background:var(--white);border:1px solid var(--blue-line);border-radius:var(--radius);
+    padding:26px 28px;box-shadow:var(--shadow);transition:transform .18s ease,border-color .18s ease;
+  }
+  .cls:hover{transform:translateY(-3px);border-color:var(--blue)}
+  .cls .tag{
+    display:inline-block;font-size:12px;font-weight:800;color:var(--blue);
+    background:var(--blue-soft);padding:4px 11px;border-radius:999px;margin-bottom:12px;letter-spacing:.5px;
+  }
+  .cls h3{margin:0 0 8px;font-size:21px;font-weight:900;color:var(--ink);letter-spacing:-.4px}
+  .cls .desc{margin:0 0 14px;color:var(--text);font-size:15px}
+  .cls .bullets{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+  .cls .bullets li{
+    font-size:13px;color:var(--muted);background:#f6f8fc;border:1px solid #eef2f9;
+    padding:5px 11px;border-radius:8px;
+  }
+  .cls .bullets li::before{content:"✓ ";color:var(--blue);font-weight:800}
+  .cls .price-box{text-align:right;min-width:120px}
+  .cls .price{font-size:24px;font-weight:900;color:var(--ink);white-space:nowrap}
+  .cls .note{
+    display:inline-block;margin-top:8px;font-size:12px;font-weight:700;color:var(--white);
+    background:var(--blue);padding:3px 10px;border-radius:999px;
+  }
+
+  /* ── 진행 방식 ── */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .step{text-align:center;padding:24px 16px;background:var(--blue-soft);border-radius:var(--radius);border:1px solid var(--blue-line)}
+  .step .n{
+    width:40px;height:40px;margin:0 auto 12px;border-radius:50%;
+    background:var(--blue);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;
+  }
+  .step h4{margin:0 0 6px;font-size:16px;color:var(--ink);font-weight:800}
+  .step p{margin:0;font-size:14px;color:var(--muted)}
+
+  /* ── 마지막 CTA ── */
+  .final{
+    background:linear-gradient(160deg,var(--blue),var(--blue-deep));
+    border-radius:26px;padding:52px 30px;text-align:center;color:#fff;box-shadow:var(--shadow);
+  }
+  .final h2{font-size:clamp(23px,4vw,30px);font-weight:900;margin:0 0 10px;letter-spacing:-.5px}
+  .final p{margin:0 0 28px;font-size:16px;color:#dbe6ff}
+  .final .hero-btns .btn-primary{background:#fff;color:var(--blue-deep)}
+  .final .hero-btns .btn-dark{background:var(--ink);color:#fff}
+
+  /* ── 푸터 ── */
+  footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:13px}
+  footer .handle{color:var(--blue-deep);font-weight:700}
+
+  /* ── 모바일 ── */
+  @media(max-width:600px){
+    .hero{padding:60px 0 46px}
+    .cls{grid-template-columns:1fr;gap:16px}
+    .cls .price-box{text-align:left}
+    .steps{grid-template-columns:1fr}
+    .top-cta{display:none}
+  }
+</style>
+</head>
+<body>
+
+  <!-- 상단바 -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="logo" id="navLogo">instalab<span>.365</span></div>
+      <a class="top-cta" href="#contact">문의하기</a>
+    </div>
+  </div>
+
+  <!-- 첫 화면 -->
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge"><span class="dot"></span><span id="heroHandle">@instalab.365</span></span>
+      <h1 id="heroTitle"></h1>
+      <p class="sub" id="heroSub"></p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="#classes">수업 둘러보기</a>
+        <a class="btn btn-ghost" href="#contact">문의하기</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 소개 -->
+  <div class="intro">
+    <div class="wrap">
+      <div class="card">
+        <span class="who">ABOUT</span>
+        <span id="introText"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 수업 -->
+  <section id="classes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Classes</div>
+        <h2>수업 안내</h2>
+      </div>
+      <div class="classes" id="classList"></div>
+    </div>
+  </section>
+
+  <!-- 진행 방식 -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">How it works</div>
+        <h2>이렇게 진행돼요</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h4>원리 이해</h4><p>왜 되는지부터 정확히 잡습니다</p></div>
+        <div class="step"><div class="n">2</div><h4>자동화 세팅</h4><p>반복 업무를 자동으로 돌립니다</p></div>
+        <div class="step"><div class="n">3</div><h4>수익화</h4><p>안정적인 매출 구조를 만듭니다</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 마지막 문의 -->
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="final">
+        <h2>궁금한 건 지금 물어보세요</h2>
+        <p id="closingText"></p>
+        <div class="hero-btns">
+          <a class="btn btn-primary" id="dmBtn" target="_blank" rel="noopener">📩 인스타 DM 문의</a>
+          <a class="btn btn-dark" id="kakaoBtn" target="_blank" rel="noopener">💬 카카오톡 문의</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="wrap">
+      <a class="handle" id="footHandle" target="_blank" rel="noopener">@instalab.365</a><br>
+      <span id="footBrand"></span> · 인스타그램 성장 강사
+    </div>
+  </footer>
+
+<script>
+  // ── CONFIG 값을 화면에 반영 (이 아래는 건드리지 않으셔도 됩니다) ──
+  const $ = (id) => document.getElementById(id);
+  const handle = "@" + CONFIG.brand;
+
+  // 첫 화면: tagline 안에서 "자동화" 단어는 파랑 강조
+  $("heroTitle").innerHTML = CONFIG.tagline.replace("자동화", "<b>자동화</b>");
+  $("heroSub").textContent = CONFIG.subline;
+  $("heroHandle").textContent = handle;
+  $("introText").textContent = CONFIG.intro;
+  $("closingText").textContent = CONFIG.closing;
+  $("navLogo").textContent = CONFIG.brand;
+  $("footBrand").textContent = CONFIG.brand;
+  $("footHandle").textContent = handle;
+  $("footHandle").href = CONFIG.instagramUrl;
+
+  // 문의 버튼 링크
+  $("dmBtn").href = CONFIG.instagramDmUrl;
+  $("kakaoBtn").href = CONFIG.kakaoUrl;
+
+  // 수업 카드 그리기
+  $("classList").innerHTML = CONFIG.classes.map(c => `
+    <div class="cls">
+      <div>
+        <span class="tag">${c.tag}</span>
+        <h3>${c.title}</h3>
+        <p class="desc">${c.desc}</p>
+        <ul class="bullets">${c.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+      </div>
+      <div class="price-box">
+        <div class="price">${c.price}</div>
+        ${c.note ? `<span class="note">${c.note}</span>` : ""}
+      </div>
+    </div>
+  `).join("");
+</script>
+
+</body>
+</html>
